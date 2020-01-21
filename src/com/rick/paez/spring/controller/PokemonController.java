@@ -6,7 +6,8 @@ import javax.servlet.http.HttpServletResponse;
 
 import org.apache.log4j.Logger;
 import org.springframework.http.MediaType;
-import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -21,11 +22,18 @@ public class PokemonController {
 	@Resource
 	PokemonBO pokemonBO;
 	
-	@RequestMapping(value = "/testXMLJSON",
-            method = RequestMethod.GET, produces = {
-                    MediaType.APPLICATION_XML_VALUE,
-                    MediaType.APPLICATION_JSON_VALUE })
-	public MensajeSalida filtroPokemon(MensajeEntrada entrada, 
+	@RequestMapping(value = "/api/sps/helloworld/v1",
+            method = RequestMethod.POST, 
+            consumes = {
+            		MediaType.APPLICATION_JSON_VALUE,
+            		MediaType.APPLICATION_XML_VALUE
+            },
+            produces = {
+            		MediaType.APPLICATION_JSON_VALUE,
+            		MediaType.APPLICATION_XML_VALUE
+                     })
+	public MensajeSalida filtroPokemon(
+			@RequestBody MensajeEntrada entrada, 
 			HttpServletRequest request, HttpServletResponse response) {
 		MensajeSalida salida = null;
 		logger.info("Into filtroPokemon");

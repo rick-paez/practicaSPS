@@ -18,7 +18,7 @@ import com.rick.paez.util.Constantes;
 public class AbstractDAO {
 	private static Logger logger = Logger.getLogger(AbstractDAO.class);
 	protected ArrayList<PokemonDTO> inicializaLista(){
-		logger.info("Into inicializaLista");
+		//logger.info("Into inicializaLista");
 		FileReader fileReader;
 		BufferedReader bufferedReader;
 		String linea;

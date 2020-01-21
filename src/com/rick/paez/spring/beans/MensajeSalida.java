@@ -11,7 +11,7 @@ import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 import com.rick.paez.dto.PokemonDTO;
-@XmlRootElement
+@XmlRootElement(name="salida")
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(propOrder={"resultado","error","descripcionError"})
 public class MensajeSalida implements Serializable {

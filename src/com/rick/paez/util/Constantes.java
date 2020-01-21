@@ -1,7 +1,7 @@
 package com.rick.paez.util;
 
 public class Constantes {
-	public static final String RUTA_CSV_POKEMON = "pokemon.csv";
+	public static final String RUTA_CSV_POKEMON = "/resources/pokemon.csv";
 	
 	//CATALOGO DE ERRORES
 	public static final String CVE_ERROR_EXITO = "00";

@@ -9,6 +9,8 @@ import java.util.StringTokenizer;
 import javax.servlet.ServletContext;
 
 import org.apache.log4j.Logger;
+import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.Resource;
 
 import com.rick.paez.dto.PokemonDTO;
 import com.rick.paez.util.Constantes;
@@ -22,10 +24,10 @@ public class AbstractDAO {
 		String linea;
 		ArrayList<PokemonDTO> listaPokemon = new ArrayList<PokemonDTO>();
 		StringTokenizer tokenizer;
-		ClassLoader classLoader = ClassLoader.getSystemClassLoader();
+		Resource resource = new ClassPathResource(Constantes.RUTA_CSV_POKEMON);
 		//String filePath =Thread.currentThread().getContextClassLoader().getResource(Constantes.RUTA_CSV_POKEMON).getFile();
 		try {
-			fileReader = new FileReader(classLoader.getResource(Constantes.RUTA_CSV_POKEMON).getFile());
+			fileReader = new FileReader(resource.getFile());
 			bufferedReader = new BufferedReader(fileReader);
 			
 			while((linea = bufferedReader.readLine()) != null) {

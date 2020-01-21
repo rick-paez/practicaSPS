@@ -3,11 +3,11 @@ package com.rick.paez.spring.config;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 
-public class PracticaSPSInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	 @Override
 	    protected Class<?>[] getRootConfigClasses() {
-	        return new Class[] { SpringConfig.class };
+	        return new Class[] { ApplicationConfig.class };
 	    }
 	  
 	    @Override

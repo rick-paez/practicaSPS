@@ -14,9 +14,18 @@ import org.springframework.core.io.Resource;
 
 import com.rick.paez.dto.PokemonDTO;
 import com.rick.paez.util.Constantes;
-
+/**
+ * Clase que contiene metodos comunes a las clases DAO
+ * @author Ricardo Paez
+ *
+ */
 public class AbstractDAO {
 	private static Logger logger = Logger.getLogger(AbstractDAO.class);
+	/**
+	 * Inicializa la lista de pokemon simulando una conexion a BD
+	 * 
+	 * @return
+	 */
 	protected ArrayList<PokemonDTO> inicializaLista(){
 		//logger.info("Into inicializaLista");
 		FileReader fileReader;

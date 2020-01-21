@@ -2,7 +2,11 @@ package com.rick.paez.spring.config;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-
+/**
+ * Clase de inicializacion del contexto SpringFramework
+ * @author Ricardo Paez
+ *
+ */
 public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
 	 @Override
@@ -19,10 +23,5 @@ public class ApplicationInitializer extends AbstractAnnotationConfigDispatcherSe
 	    protected String[] getServletMappings() {
 	        return new String[] { "/" };
 	    }
-	 
-
-	
-		
-	
 
 }

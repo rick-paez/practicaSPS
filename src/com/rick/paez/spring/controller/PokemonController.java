@@ -17,11 +17,24 @@ import com.rick.paez.spring.beans.MensajeSalida;
 import com.rick.paez.spring.bo.PokemonBO;
 
 @RestController
+/**
+ * Clase principal del controlador de 
+ * Servicios
+ * @author Ricardo Paez
+ *
+ */
 public class PokemonController {
 	private Logger logger = Logger.getLogger(PokemonController.class);
 	@Resource
 	PokemonBO pokemonBO;
-	
+	/**
+	 * Metodo que expone el servicio de busqueda de pokemon 
+	 * en la URL /api/sps/helloworld/v1
+	 * @param entrada
+	 * @param request
+	 * @param response
+	 * @return
+	 */
 	@RequestMapping(value = "/api/sps/helloworld/v1",
             method = RequestMethod.POST, 
             consumes = {
